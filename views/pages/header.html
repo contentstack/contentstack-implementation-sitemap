@@ -1,0 +1,19 @@
+<!-- Header/nav bar -->
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top" style="padding-top: 0px; padding-bottom: 0px;" >
+  <a class="navbar-brand" href="/">
+    <img style="width:181px; height: 60px;" src="https://images.contentstack.io/v3/assets/bltff856f3f034d89c7/bltfa77347affafb321/5e3a846407f98b677fe34077/logo-hover.png" alt="">
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      {% for menu in header.entry.navigation_section.navigation_bar %}
+        <li class="nav-item">
+          <a class="nav-link" href="{{menu.link}}">{{menu.title}}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</nav>

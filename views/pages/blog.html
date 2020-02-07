@@ -1,0 +1,45 @@
+<!-- Blogs page html -->
+
+{% extends "pages/index.html" %} 
+{% block content %} 
+
+<h1 style="color: rgb(78, 78, 78);margin-left: 18px;
+margin-right: 18px;
+margin-top: 30px;
+">Welcome To Blogs </h1>
+{% for blogdetails in blog.entries %}
+
+<div
+  class="row"
+  style="
+margin-left: 18px;
+margin-right: 18px;
+margin-top: 30px;
+"
+>
+  <div class="leftcolumn">
+    <div class="card" style="border: none;">
+      <h2 style="cursor:pointer; color: rgb(70, 67, 67);" >{{blogdetails.blog_heading}}</h2>
+      <div style="height:200px;">
+        <img
+          style="width: 300px; height: 180px;"
+          src="{{blogdetails.image.url}}"
+        />
+      </div>
+      <p
+        style="margin-right: 600px; overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        /* number of lines to show */
+        -webkit-box-orient: vertical;"
+      >
+        {{blogdetails.blog_body}}
+      </p>
+      <a style="text-decoration: none; color: black;" href="/blog{{blogdetails.url}}">See More..</a>
+    </div>
+  </div>
+</div>
+{% endfor %}
+<br /><br />
+{% endblock %}
