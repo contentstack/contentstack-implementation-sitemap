@@ -1,26 +1,26 @@
 {
-  "name": "sitemap2",
+  "name": "sitemap",
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node app.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "async": "^3.1.1",
-    "axios": "^0.19.2",
-    "express": "^4.17.1",
-    "nunjucks": "^3.2.0",
-    "path": "^0.12.7"
+    "async": "3.1.1",
+    "axios": "0.19.2",
+    "express": "4.17.1",
+    "nunjucks": "3.2.0",
+    "path": "0.12.7"
   },
   "devDependencies": {
-    "eslint": "^6.1.0",
-    "eslint-config-airbnb": "^18.0.1",
-    "eslint-plugin-import": "^2.20.1",
-    "eslint-plugin-jsx-a11y": "^6.2.3",
-    "eslint-plugin-react": "^7.18.3",
-    "eslint-plugin-react-hooks": "^1.7.0"
+    "eslint": "6.1.0",
+    "eslint-config-airbnb": "18.0.1",
+    "eslint-plugin-import": "2.20.1",
+    "eslint-plugin-jsx-a11y": "6.2.3",
+    "eslint-plugin-react": "7.18.3",
+    "eslint-plugin-react-hooks": "1.7.0"
   }
 }
