@@ -1,7 +1,6 @@
 <!-- Blog content page html -->
 
-{% extends "pages/index.html" %} 
-{% block content %} 
+{% extends "pages/index.html" %} {% block content %}
 
 <div
   class="row"
@@ -9,6 +8,7 @@
 margin-left: 18px;
 margin-right: 18px;
 margin-top: 30px;
+justify-content: center;
 text-align: center;
 "
 >
@@ -16,17 +16,16 @@ text-align: center;
     <div class="card" style="border: none;">
       <h2 style="cursor:pointer">{{content.blog_heading}}</h2>
       <div>
-        <img
-          style="width: 400px; height: 280px;"
-          src="{{content.image.url}}"
-        />
+        <img style="width: 400px; height: 280px;" src="{{content.image.url}}" />
       </div>
-      <br>
+      <br />
       <p style="font-family: 'Nunito', sans-serif; font-size: 17px;">
         {{content.blog_body}}
       </p>
     </div>
-    <a style="text-decoration: none; color: rgb(80, 73, 73);" href="/blog">Return back..</a>
+    <a style="text-decoration: none; color: rgb(80, 73, 73);" href="/blog"
+      >Return back..</a
+    >
   </div>
 </div>
 

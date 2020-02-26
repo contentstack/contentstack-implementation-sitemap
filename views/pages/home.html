@@ -1,14 +1,13 @@
 <!-- Home html -->
 
-{% extends "pages/index.html" %}
-
-{% block content %}
+{% extends "pages/index.html" %} {% block content %}
 <div class="container pt-3">
-    <h1>{{home.entry.heading}}</h1>
-    <p style="font-family: Verdana, Geneva, Tahoma, sans-serif">{{home.entry.description}}</p>
-    <br>
-    <img src="{{home.entry.image.url}}" style="width: 800px" ; height="400px;" />
-
+  <h1>{{home.entry.heading}}</h1>
+  <p style="font-family: Verdana, Geneva, Tahoma, sans-serif">
+    {{home.entry.description}}
+  </p>
+  <br />
+  <img src="{{home.entry.image.url}}" style="width: 800px" ; height="400px;" />
 </div>
-<br>
+<br />
 {% endblock %}

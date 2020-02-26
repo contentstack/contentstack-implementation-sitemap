@@ -2,26 +2,21 @@
  * Module dependencies.
  */
 
-var express = require('express');
-var router = express.Router();
-var axios = require('axios');
+const express = require('express');
 
+const router = express.Router();
 
+const configVars = require('../config');
+const utils = require('../utils');
 
-
-router.get('/', function(req, res, next){
-  
-    axios({
-        method: 'get',
-        url: `https://cdn.contentstack.io/v3/content_types/${process.env.HOMEPAGE_CONTENT_TYPE}/entries/${process.env.HOMEPAGE_ENTRY_UID}?environment=${process.env.ENV}`,
-        headers:{api_key:process.env.APIKEY,access_token:process.env.ACCESSTOKEN,"Content-Type":"application/json"}
-        
-      })
-        .then(function (data) {
-          res.render('pages/home.html',{home:data.data})
-        }).catch((err)=>{
-          console.log(err);
-        })
+router.get('/', (req, res) => {
+  utils.getData(`https://cdn.contentstack.io/v3/content_types/${configVars.homeSection.homeContentTypeId}/entries/${configVars.homeSection.homeEnrtyId}?environment=${configVars.env}`)
+    .then((data) => {
+      res.render('pages/home.html', { home: data.data });
+    })
+    .catch((err) => {
+      console.log(err);
+    });
 });
 
 module.exports = router;

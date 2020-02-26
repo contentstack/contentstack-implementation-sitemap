@@ -11,23 +11,16 @@
   "dependencies": {
     "async": "^3.1.1",
     "axios": "^0.19.2",
-    "cheerio": "^1.0.0-rc.3",
-    "crawler": "^1.2.1",
-    "dotenv": "^8.2.0",
-    "eslint-config-airbnb": "^18.0.1",
     "express": "^4.17.1",
-    "express-sitemap": "^1.8.0",
     "nunjucks": "^3.2.0",
-    "path": "^0.12.7",
-    "request": "^2.88.0",
-    "request-promise": "^4.2.5",
-    "simplecrawler": "^1.1.8",
-    "sitemap": "^5.1.0",
-    "sitemap-generator": "^8.4.2",
-    "sitemap-xml": "^0.1.0",
-    "xml-js": "^1.6.11",
-    "xml-writer": "^1.7.0",
-    "xml2js": "^0.4.23",
-    "zlib": "^1.0.5"
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "eslint": "^6.1.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.18.3",
+    "eslint-plugin-react-hooks": "^1.7.0"
   }
 }
