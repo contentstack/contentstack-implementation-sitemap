@@ -19,6 +19,7 @@ nunjucks.configure(['views/'], {
 });
 
 // Routes
+
 require('./routes')(app);
 
 
@@ -28,7 +29,7 @@ sitemapFunction.untrackedUrls(); // first untracked url call with no interval
 
 sitemapFunction.initialSynCall(); // called only once
 
-setInterval(sitemapFunction.updateCall, 100000); // 1 min days interval
+setInterval(sitemapFunction.updateCall, 100000); // 1 min interval
 
 app.get('/sitemap', (req, res) => {
   res.contentType('application/xml');
