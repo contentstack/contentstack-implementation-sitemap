@@ -10,7 +10,7 @@ const mapping = [];
 
 let syncTokenVar = "";
 
-// for untracked urls
+// For untracked urls 
 async function untrackedUrls() {
   return utils
     .getData(

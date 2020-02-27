@@ -36,6 +36,7 @@ app.get('/sitemap', (req, res) => {
 });
 
 // load port on 4000
+
 app.listen(configVars.port, () => {
   console.log(`Start your browser on port ${configVars.port}`);
 });

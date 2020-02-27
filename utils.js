@@ -39,6 +39,7 @@ function syncWriteFunction(syncTokenVar) {
 }
 
 // Axios wrapper
+
 function getData(url) {
   const headerData = {
     headers: {
