@@ -16,7 +16,7 @@ module.exports = {
     homeEnrtyId: 'blta517cc7eaf012da7',
   },
   expressBlogSection: {
-    blogContentTypeId: 'trial_blog',
+    blogContentTypeId: 'express_blog',
   },
   unTrackedUrls: {
     unTrackedUrlsContentTypeId: 'untracked_urls',

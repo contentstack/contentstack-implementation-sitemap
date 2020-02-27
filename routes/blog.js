@@ -12,7 +12,6 @@ const utils = require('../utils');
 router.get('/', (req, res) => {
   utils.getData(`https://cdn.contentstack.io/v3/content_types/${configVars.expressBlogSection.blogContentTypeId}/entries?environment=${configVars.env}`)
     .then((data) => {
-      // console.log(data.data);
       res.render('pages/blog.html', { blog: data.data });
     }).catch((err) => {
       console.log(err);

@@ -1,4 +1,8 @@
 
+/**
+ * Module dependencies.
+ */
+
 const axios = require('axios');
 const fs = require('fs');
 const configVars = require('./config');
@@ -23,12 +27,13 @@ function createSitemap(mapping) {
 
 
 // Write SyncFile with SyncToken
+
 function syncWriteFunction(syncTokenVar) {
   fs.writeFileSync('./syncToken.txt', syncTokenVar, (err) => {
     if (err) {
       console.log(err);
     } else {
-      console.log('Mapped file created');
+      // console.log('Mapped file created');
     }
   });
 }
@@ -44,7 +49,8 @@ function getData(url) {
   return axios.get(url, headerData);
 }
 
-// exports library
+// export library
+
 module.exports = {
   getData,
   syncWriteFunction,
