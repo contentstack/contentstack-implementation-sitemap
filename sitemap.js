@@ -14,7 +14,7 @@ let syncTokenVar = "";
 async function untrackedUrls() {
   return utils
     .getData(
-      `https://cdn.contentstack.io/v3/content_types/${configVars.unTrackedUrls.unTrackedUrlsContentTypeId}/entries/${configVars.unTrackedUrls.unTrackedUrlsEntryId}?environment=${configVars.env}`
+      `${configVars.baseUrlContentStack}/content_types/${configVars.unTrackedUrls.unTrackedUrlsContentTypeId}/entries/${configVars.unTrackedUrls.unTrackedUrlsEntryId}?environment=${configVars.env}`
     )
     .then(resp => {
       resp.data.entry.urls.map(index => {
@@ -36,7 +36,7 @@ async function untrackedUrls() {
 async function initialSynCall() {
   return utils
     .getData(
-      `https://cdn.contentstack.io/v3/stacks/sync?init=true&environment=${configVars.env}&content_type_uid=${configVars.expressBlogSection.blogContentTypeId}`
+      `${configVars.baseUrlContentStack}/stacks/sync?init=true&environment=${configVars.env}&content_type_uid=${configVars.expressBlogSection.blogContentTypeId}`
     )
     .then(data => {
       if (data.data.sync_token) {
@@ -73,7 +73,7 @@ async function initialSynCall() {
 function pageCallMethod(token) {
   return utils
     .getData(
-      `https://cdn.contentstack.io/v3/stacks/sync?pagination_token=${token}`
+      `${configVars.baseUrlContentStack}/stacks/sync?pagination_token=${token}`
     )
     .then(data => {
       data.data.items.map(index => {
@@ -100,7 +100,7 @@ function pageCallMethod(token) {
 async function updateCall() {
   return utils
     .getData(
-      `https://cdn.contentstack.io/v3/stacks/sync?sync_token=${syncTokenVar}`
+      `${configVars.baseUrlContentStack}/stacks/sync?sync_token=${syncTokenVar}`
     )
     .then(data => {
       if (syncTokenVar === data.data.sync_token) {
