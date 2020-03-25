@@ -1,4 +1,4 @@
-/* eslint-disable global-require */
+// routes
 
 module.exports = function (app) {
   app.use('/', require('../middleware'));

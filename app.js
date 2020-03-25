@@ -27,9 +27,9 @@ sitemapFunction.untrackedUrls(); // first untracked url call with no interval
 
 setInterval(sitemapFunction.untrackedUrls, 2592000); // for untracked interval is set for 30 days in seconds
 
-sitemapFunction.initialSynCall(); // called only once
+sitemapFunction.initialSyncCall(); // called only once
 
-setInterval(sitemapFunction.updateCall, 100000); // 1 min interval change per your need
+setInterval(sitemapFunction.consecutiveSyncCall, configVars.timeInterval); // 1 min interval change per your need
 
 app.get('/sitemap', (req, res) => {
   res.contentType('application/xml');

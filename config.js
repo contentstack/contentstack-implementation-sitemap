@@ -1,11 +1,12 @@
 module.exports = {
+  timeInterval: 60000,
   baseUrlContentStack: 'https://cdn.contentstack.io/v3',
-  port: '', //mention port
-  apiKey: '',// apikey
-  accessToken: '', //accessToken
-  env: '', // environment
+  port: 4000,
+  apiKey: '',
+  accessToken: '',
+  env: '',
   headerSection: {
-    headerContentTypeId: '', 
+    headerContentTypeId: '',
     headerEnrtyId: '',
   },
   footerSection: {
@@ -24,6 +25,6 @@ module.exports = {
     unTrackedUrlsEntryId: '',
   },
   rootPath: {
-    path: '', // your website's url (eg: www.yoursitename.com)
+    path: '',
   },
 };

@@ -1,4 +1,3 @@
-/* eslint-disable prefer-destructuring */
 /**
  * Module dependencies.
  */

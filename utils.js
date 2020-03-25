@@ -28,7 +28,7 @@ function createSitemap(mapping) {
 
 // Write SyncFile with SyncToken
 
-function syncWriteFunction(syncTokenVar) {
+function syncTokenGenerator(syncTokenVar) {
   fs.writeFileSync('./syncToken.txt', syncTokenVar, (err) => {
     if (err) {
       console.log(err);
@@ -54,6 +54,6 @@ function getData(url) {
 
 module.exports = {
   getData,
-  syncWriteFunction,
+  syncTokenGenerator,
   createSitemap,
 };
