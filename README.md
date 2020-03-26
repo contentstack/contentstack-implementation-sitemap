@@ -14,7 +14,8 @@ Contentstack makes it possible to provide sitemap for your websites that are pow
 
 We have created an in-depth tutorial on how you can create a sitemap for a contentstack powered website.We have built an example app using Express.js to help you learn more.
 
-
+![Sitemap file](https://user-images.githubusercontent.com/29656920/77641084-76a1c900-6f81-11ea-8df8-55ce40337b3b.png)
+![Home Page](https://user-images.githubusercontent.com/29656920/77641093-79042300-6f81-11ea-82f8-29b206c8bd37.png)
 
 ## Documentation
 
