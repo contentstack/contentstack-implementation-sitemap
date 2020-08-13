@@ -1,5 +1,5 @@
 module.exports = {
-  timeInterval: 60000,
+  timeInterval: 120000, // time interval in milliseconds i.e 120000 ms = 2 mins
   baseUrlContentStack: 'https://cdn.contentstack.io/v3',
   port: 4000,
   apiKey: '',

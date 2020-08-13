@@ -25,7 +25,9 @@ require('./routes')(app);
 
 sitemapFunction.untrackedUrls(); // first untracked url call with no interval
 
-setInterval(sitemapFunction.untrackedUrls, 2592000); // for untracked interval is set for 30 days in seconds
+// For setInterval function the second parameter is the time in millisecond's make sure to add equivalent millisecond's based on your days
+
+setInterval(sitemapFunction.untrackedUrls, 864000000); // for untracked urls interval is set for 10 days in millisecond's
 
 sitemapFunction.initialSyncCall(); // called only once
 
